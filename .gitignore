@@ -1,0 +1,7 @@
+# Compilation
+*.o
+*.a
+
+# Test
+test
+test.output
