@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-phpmyadmin
+  labels:
+    app: phpmyadmin
+  annotations:
+    metallb.universe.tf/allow-shared-ip: lb
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 10.0.2.10
+  ports:
+    - name: port-out-pma
+      port: 5000
+      targetPort: 80
+  selector:
+    app: phpmyadmin
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp-phpmyadmin
+  labels:
+    app: phpmyadmin
+spec:
+  replicas: 1
+  template:
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: ctn-phpmyadmin
+          image: phpmyadmin
+          imagePullPolicy: Never
+          ports:
+            - name: port-in-pma
+              containerPort: 80
+    metadata:
+      labels:
+        app: phpmyadmin
+  selector:
+    matchLabels:
+      app: phpmyadmin

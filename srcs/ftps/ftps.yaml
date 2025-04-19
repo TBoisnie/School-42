@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-ftps
+  labels:
+    app: ftps
+  annotations:
+    metallb.universe.tf/allow-shared-ip: lb
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 10.0.2.10
+  ports:
+  - name: port-out-ftps
+    port: 21
+  - name: port-out-ftps-data
+    port: 21100
+  selector:
+    app: ftps
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp-ftps
+  labels:
+    app: ftps
+spec:
+  replicas: 1
+  template:
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: ctn-ftps
+        image: ftps
+        imagePullPolicy: Never
+        securityContext:
+          privileged: true
+        env:
+          - name: FTP_USER
+            value: ftp_user
+          - name: FTP_PASS
+            value: ftp_pass
+    metadata:
+      labels:
+        app: ftps
+  selector:
+    matchLabels:
+      app: ftps

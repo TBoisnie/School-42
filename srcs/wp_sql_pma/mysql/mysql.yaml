@@ -1,0 +1,85 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mysql
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 400Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/k8s_mysql"
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-mysql
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 300Mi
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-mysql
+  labels:
+    app: mysql
+spec:
+  type: ClusterIP
+  ports:
+    - name: port-out-mysql
+      port: 3306
+  selector:
+    app: mysql
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp-mysql
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  template:
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: ctn-mysql
+          image: mysql
+          imagePullPolicy: Never
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: toor
+            - name: MYSQL_DATABASE
+              value: wordpress
+            - name: MYSQL_USER
+              value: mysql_user
+            - name: MYSQL_PASS
+              value: mysql_pass
+          ports:
+            - name: port-in-mysql
+              containerPort: 3306
+          volumeMounts:
+            - name: ps-mysql
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: ps-mysql
+          persistentVolumeClaim:
+            claimName: pvc-mysql
+    metadata:
+      labels:
+        app: mysql
+  selector:
+    matchLabels:
+      app: mysql

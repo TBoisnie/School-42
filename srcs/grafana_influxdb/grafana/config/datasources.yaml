@@ -1,0 +1,54 @@
+# config file version
+apiVersion: 1
+
+# list of datasources to insert/update depending
+# what's available in the database
+datasources:
+  # <string, required> name of the datasource. Required
+  - name: MySQL_Metrics
+    # <string, required> datasource type. Required
+    type: influxdb
+    # <string, required> access mode. proxy or direct (Server or Browser in the UI). Required
+    access: proxy
+    # <string> url
+    url: http://_k8s_influxdb_ip_:8086
+    # <string> database name, if used
+    database: mysql_metrics
+    # <bool> mark as default datasource. Max one per org
+    isDefault: false
+  - name: PMA_Metrics
+    type: influxdb
+    access: proxy
+    url: http://_k8s_influxdb_ip_:8086
+    database: pma_metrics
+    isDefault: false
+  - name: WP_Metrics
+    type: influxdb
+    access: proxy
+    url: http://_k8s_influxdb_ip_:8086
+    database: wp_metrics
+    isDefault: false
+  - name: FTPS_Metrics
+    type: influxdb
+    access: proxy
+    url: http://_k8s_influxdb_ip_:8086
+    database: ftps_metrics
+    isDefault: false
+  - name: Nginx_Metrics
+    type: influxdb
+    access: proxy
+    url: http://_k8s_influxdb_ip_:8086
+    database: nginx_metrics
+    isDefault: false
+  - name: Grafana_Metrics
+    type: influxdb
+    access: proxy
+    url: http://_k8s_influxdb_ip_:8086
+    database: grafana_metrics
+    isDefault: false
+  - name: InfluxDB_Metrics
+    type: influxdb
+    access: proxy
+    url: http://_k8s_influxdb_ip_:8086
+    database: influxdb_metrics
+    isDefault: false

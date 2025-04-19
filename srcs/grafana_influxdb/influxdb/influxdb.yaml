@@ -1,0 +1,78 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-influxdb
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 400Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/k8s_influxdb"
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-influxdb
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 300Mi
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-influxdb
+  labels:
+    app: influxdb
+spec:
+  type: ClusterIP
+  ports:
+    - name: port-out-influx
+      port: 8086
+  selector:
+    app: influxdb
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp-influxdb
+  labels:
+    app: influxdb
+spec:
+  replicas: 1
+  template:
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: ctn-influxdb
+          image: influxdb
+          imagePullPolicy: Never
+          securityContext:
+            privileged: true
+          ports:
+            - name: port-in-influx
+              containerPort: 8086
+          volumeMounts:
+            - name: ps-influxdb
+              mountPath: /var/lib/influxdb
+      volumes:
+        - name: ps-influxdb
+          persistentVolumeClaim:
+            claimName: pvc-influxdb
+    metadata:
+      labels:
+        app: influxdb
+  selector:
+    matchLabels:
+      app: influxdb
