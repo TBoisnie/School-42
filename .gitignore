@@ -1,0 +1,16 @@
+
+# Compiled files
+/**/*.o
+/**/*.a
+/**/a.out
+
+# Executable
+/day_0/srcs/**/megaphone
+/day_0/srcs/**/phonebook
+/day_1/srcs/**/replace
+/day_6/srcs/**/convert
+/day_6/srcs/**/serialize
+/day_6/srcs/**/dynamic
+/day_7/srcs/**/template
+/day_7/srcs/**/iter
+/day_7/srcs/**/array
