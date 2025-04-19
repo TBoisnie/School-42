@@ -1,0 +1,20 @@
+  R 1280 720
+
+       NO       ./images/North.xpm
+   SO ./images/South.xpm
+WE ./images/West.xpm
+   EA ./images/East.xpm
+
+ S  ./images/Sprite.xpm
+
+F 59,179,209
+   C 212,176,76
+
+    111 11
+    1S0101
+  11000121
+1100002001
+  1110101
+110210001
+100000101
+111111 1
