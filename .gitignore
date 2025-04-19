@@ -1,0 +1,4 @@
+# Compilation
+*.o
+*.a
+minishell
