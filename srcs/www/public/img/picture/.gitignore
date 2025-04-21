@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But
+!.gitignore
+
+!bulbizar.png
+!carapuce.png
+!evoli.png
+!mewtwo.png
+!pokemon.png
+!salameche.png

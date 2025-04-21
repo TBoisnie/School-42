@@ -1,0 +1,36 @@
+version: '3'
+services:
+
+  nginx:
+    build: ./docker/nginx
+    restart: unless-stopped
+    volumes:
+      - ./www/:/var/www/camagru
+      - ./docker/nginx/config/default.conf:/etc/nginx/conf.d/default.conf
+    env_file:
+      - .env
+    ports:
+      - "4443:443"
+    depends_on:
+      - php
+
+  php:
+    build: ./docker/php
+    restart: unless-stopped
+    volumes:
+      - ./www:/var/www/camagru
+      - ./docker/php/config/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./docker/php/config/msmtprc:/etc/msmtprc
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    build: ./docker/postgres
+    restart: unless-stopped
+    volumes:
+      # - ./db:/var/lib/postgresql/data
+      - ./www/src/migration/tables.sql:/docker-entrypoint-initdb.d/tables.sql
+    env_file:
+      - .env
