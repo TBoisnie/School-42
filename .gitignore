@@ -1,0 +1,6 @@
+# Compilation
+.objs/
+*.o
+*.d
+
+webserv
