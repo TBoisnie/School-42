@@ -1,0 +1,286 @@
+{
+  "navbar": {
+    "button": {
+      "language": "English",
+      "logout": "Log out",
+      "home": "Home",
+      "about": "About",
+      "profile": "Profile",
+      "movies": "Movies",
+      "users": "Users",
+      "login":"Log in"
+    },
+    "modal": {
+      "success": {
+        "header": "Logout successful",
+        "paragraph": "Press anywhere to continue"
+      },
+      "error": {
+        "header": "Something went wrong",
+        "paragraph": "Internal server error"
+      }
+    }
+  },
+  "login": {
+    "header": {
+      "header": "Get started!",
+      "paragraph": "Welcome on the hypertube 42 project!\nPlease log in or create an account to continue"
+    },
+    "input": {
+      "email": "Email",
+      "password": "Password"
+    },
+    "button": {
+      "login": "Log in",
+      "reset": "Forgot password?",
+      "register": "Create account"
+    },
+    "modal": {
+      "success": {
+        "header": "Login successful",
+        "paragraph": "Press anywhere to continue"
+      },
+      "error": {
+        "header": "Something went wrong",
+        "paragraph": {
+          "email": "Email not found",
+          "password": "Password incorrect",
+          "server": "Internal server error"
+        }
+      }
+    }
+  },
+  "register": {
+    "header": {
+      "header": "Create account",
+      "paragraph": ""
+    },
+    "input": {
+      "email": "Email",
+      "password": "Password",
+      "username": "Username",
+      "firstname": "First name",
+      "lastname": "Last name"
+    },
+    "button": {
+      "register": "Register"
+    },
+    "modal": {
+      "success": {
+        "header": "Account created",
+        "paragraph": "Press anywhere to continue"
+      },
+      "error": {
+        "header": "Something went wrong",
+        "paragraph": {
+          "email": "Email already in use",
+          "server": "Internal server error"
+        }
+      }
+    }
+  },
+  "reset": {
+    "header": {
+      "header": "Reset password",
+      "paragraph": "Please enter your email address to receive a password reset link"
+    },
+    "input": {
+      "email": "Email"
+    },
+    "button": {
+      "reset": "Reset"
+    },
+    "modal": {
+      "success": {
+        "header": "Password reset successful",
+        "paragraph": "Press anywhere to continue"
+      },
+      "error": {
+        "header": "Something went wrong",
+        "paragraph": {
+          "email": "Email not found",
+          "server": "Internal server error"
+        }
+      }
+    }
+  },
+  "confirm": {
+    "header": {
+      "header": "Confirm password",
+      "paragraph": "Please enter your new password"
+    },
+    "input": {
+      "password": "Password"
+    },
+    "button": {
+      "confirm": "Confirm"
+    },
+    "modal": {
+      "success": {
+        "header": "Password reset successful",
+        "paragraph": "Press anywhere to continue"
+      },
+      "error": {
+        "header": "Something went wrong",
+        "paragraph": {
+          "server": "Internal server error"
+        }
+      }
+    }
+  },
+  "oauth": {
+    "42": {
+      "modal": {
+        "success": {
+          "header": "42 OAuth",
+          "paragraph": "You loged in with your 42 account"
+        }
+      }
+    },
+    "google": {
+      "modal": {
+        "success": {
+          "header": "Google OAuth",
+          "paragraph": "You loged in with your Google account"
+        }
+      }
+    },
+    "github": {
+      "modal": {
+        "success": {
+          "header": "Github OAuth",
+          "paragraph": "You loged in with your Github account"
+        }
+      }
+    },
+    "error": {
+      "header": "Something went wrong",
+      "paragraph": "Internal server error"
+    }
+  },
+  "button": {
+    "validation": {
+      "submit": "Submit",
+      "submitted": "Submitted",
+      "submitting": "Submitting",
+      "failed": "Error"
+    }
+  },
+  "profile": {
+    "header": {
+      "header": "Profile",
+      "paragraph": "Update your account information"
+    },
+    "input": {
+      "email": "Email",
+      "password": "Password",
+      "username": "Username",
+      "firstname": "First name",
+      "lastname": "Last name",
+      "picture": "Picture"
+    },
+    "button": {
+      "update": "Update",
+      "delete": "Delete account"
+    },
+    "modal": {
+      "update": {
+        "success": {
+          "header": "Account updated",
+          "paragraph": "Press anywhere to continue"
+        },
+        "error": {
+          "header": "Something went wrong",
+          "paragraph": {
+            "email": "Email already in use",
+            "server": "Internal server error"
+          }
+        }
+      },
+      "delete": {
+        "success": {
+          "header": "Account deleted",
+          "paragraph": "Press anywhere to continue"
+        },
+        "error": {
+          "header": "Something went wrong",
+          "paragraph": "Internal server error"
+        }
+      }
+    }
+  },
+  "users": {
+    "header": {
+      "header": "Users",
+      "paragraph": "List of all users on the platform\n(public informations)"
+    }
+  },
+  "detail": {
+    "header": {
+      "header": "User",
+      "paragraph": "Public informations"
+    }
+  },
+  "info": "Informations",
+	"infos": {
+		"title": "Title",
+		"rating": "IMDB Rating",
+		"year": "Year",
+		"runtime": "Runtime",
+		"subtitles": "Subtitles",
+		"add_date": "Add date",
+    "description": "Summary"
+	},
+	"genre": "Genre",
+	"genres": {
+		"any": "Any",
+		"action": "Action",
+		"adventure": "Aventure",
+		"animation": "Animation",
+		"biography": "Biography",
+		"comedy": "Comedy",
+		"crime": "Crime",
+		"documentary": "Documentary",
+		"drama": "Drama",
+		"family": "Family",
+		"fantasy": "Fantasy",
+		"noir": "Film-Noir",
+		"history": "History",
+		"horror": "Horror",
+		"music": "Music",
+		"musical": "Musical",
+		"mystery": "Mystery",
+		"romance": "Romance",
+		"scifi": "Sci-Fi",
+		"sport": "Sport",
+		"thriller": "Thriller",
+		"war": "War",
+		"western": "Western"
+	},
+	"filters": "Filters",
+	"sort_by": "Sort by",
+	"order": "Order",
+	"orders": {
+		"asc": "Asc",
+		"desc": "Desc"
+	},
+	"not_found": "Movie not found",
+  "comments": "Comments",
+	"create": "Comment",
+	"save": "Post",
+	"comment": {
+		"content": {
+			"length": "Comment must be between 8 and 1024 characters long"
+		}
+	},
+  "nav": {
+		"home": "Home"
+	},
+	"language": {
+		"en": "English",
+		"fr": "French"
+	},
+	"loading": "Loading",
+	"no_more_pages": "No more content",
+  "top": "Top movies"
+}

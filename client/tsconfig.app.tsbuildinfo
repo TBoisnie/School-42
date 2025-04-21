@@ -1,0 +1,31 @@
+{
+    "root": [
+        "./src/app.tsx",
+        "./src/approutes.tsx",
+        "./src/main.tsx",
+        "./src/vite-env.d.ts",
+        "./src/components/common/header.tsx",
+        "./src/components/common/modalresponse.tsx",
+        "./src/components/common/validationbutton.tsx",
+        "./src/components/common/validationinput.tsx",
+        "./src/components/confirm/confirm.tsx",
+        "./src/components/confirm/composants/confirmform.tsx",
+        "./src/components/contexts/authcontext.tsx",
+        "./src/components/login/login.tsx",
+        "./src/components/login/components/loginform.tsx",
+        "./src/components/login/components/loginoauthbuttons.tsx",
+        "./src/components/login/components/loginregisterbutton.tsx",
+        "./src/components/navigation/navigation.tsx",
+        "./src/components/navigation/components/navigationlogin.tsx",
+        "./src/components/navigation/components/navigationlogout.tsx",
+        "./src/components/register/register.tsx",
+        "./src/components/register/components/registerform.tsx",
+        "./src/components/reset/reset.tsx",
+        "./src/components/reset/composants/resetform.tsx",
+        "./src/components/settings/settings.tsx",
+        "./src/components/settings/components/settingsform.tsx",
+        "./src/utilities/translation.tsx",
+        "./src/utilities/validators.tsx"
+    ],
+    "version": "5.6.2"
+}

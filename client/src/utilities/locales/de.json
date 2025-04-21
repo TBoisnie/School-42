@@ -1,0 +1,277 @@
+{
+    "navbar": {
+      "button": {
+        "language": "Deutsch",
+        "logout": "Abmelden",
+        "home": "Startseite",
+        "about": "Über",
+        "profile": "Profil",
+        "movies": "Filme",
+        "users": "Benutzer",
+        "login": "Anmelden"
+      },
+      "modal": {
+        "success": {
+          "header": "Erfolgreich abgemeldet",
+          "paragraph": "Drücken Sie irgendwo, um fortzufahren"
+        },
+        "error": {
+          "header": "Etwas ist schief gelaufen",
+          "paragraph": "Interner Serverfehler"
+        }
+      }
+    },
+    "login": {
+      "header": {
+        "header": "Loslegen!",
+        "paragraph": "Willkommen beim Hypertube 42 Projekt!\nBitte melden Sie sich an oder erstellen Sie ein Konto, um fortzufahren"
+      },
+      "input": {
+        "email": "E-Mail",
+        "password": "Passwort"
+      },
+      "button": {
+        "login": "Anmelden",
+        "reset": "Passwort vergessen?",
+        "register": "Konto erstellen"
+      },
+      "modal": {
+        "success": {
+          "header": "Erfolgreich angemeldet",
+          "paragraph": "Drücken Sie irgendwo, um fortzufahren"
+        },
+        "error": {
+          "header": "Etwas ist schief gelaufen",
+          "paragraph": {
+            "email": "E-Mail nicht gefunden",
+            "password": "Passwort falsch",
+            "server": "Interner Serverfehler"
+          }
+        }
+      }
+    },
+    "register": {
+      "header": {
+        "header": "Konto erstellen",
+        "paragraph": ""
+      },
+      "input": {
+        "email": "E-Mail",
+        "password": "Passwort",
+        "username": "Benutzername",
+        "firstname": "Vorname",
+        "lastname": "Nachname"
+      },
+      "button": {
+        "register": "Registrieren"
+      },
+      "modal": {
+        "success": {
+          "header": "Konto erstellt",
+          "paragraph": "Drücken Sie irgendwo, um fortzufahren"
+        },
+        "error": {
+          "header": "Etwas ist schief gelaufen",
+          "paragraph": {
+            "email": "E-Mail bereits in Gebrauch",
+            "server": "Interner Serverfehler"
+          }
+        }
+      }
+    },
+    "reset": {
+      "header": {
+        "header": "Passwort zurücksetzen",
+        "paragraph": "Bitte geben Sie Ihre E-Mail-Adresse ein, um einen Link zum Zurücksetzen des Passworts zu erhalten"
+      },
+      "input": {
+        "email": "E-Mail"
+      },
+      "button": {
+        "reset": "Zurücksetzen"
+      },
+      "modal": {
+        "success": {
+          "header": "Passwort erfolgreich zurückgesetzt",
+          "paragraph": "Drücken Sie irgendwo, um fortzufahren"
+        },
+        "error": {
+          "header": "Etwas ist schief gelaufen",
+          "paragraph": {
+            "email": "E-Mail nicht gefunden",
+            "server": "Interner Serverfehler"
+          }
+        }
+      }
+    },
+    "confirm": {
+      "header": {
+        "header": "Passwort bestätigen",
+        "paragraph": "Bitte geben Sie Ihr neues Passwort ein"
+      },
+      "input": {
+        "password": "Passwort"
+      },
+      "button": {
+        "confirm": "Bestätigen"
+      },
+      "modal": {
+        "success": {
+          "header": "Passwort erfolgreich zurückgesetzt",
+          "paragraph": "Drücken Sie irgendwo, um fortzufahren"
+        },
+        "error": {
+          "header": "Etwas ist schief gelaufen",
+          "paragraph": {
+            "server": "Interner Serverfehler"
+          }
+        }
+      }
+    },
+    "oauth": {
+      "42": {
+        "modal": {
+          "success": {
+            "header": "42 OAuth",
+            "paragraph": "Sie haben sich mit Ihrem 42-Konto angemeldet"
+          }
+        }
+      },
+      "google": {
+        "modal": {
+          "success": {
+            "header": "Google OAuth",
+            "paragraph": "Sie haben sich mit Ihrem Google-Konto angemeldet"
+          }
+        }
+      },
+      "github": {
+        "modal": {
+          "success": {
+            "header": "Github OAuth",
+            "paragraph": "Sie haben sich mit Ihrem Github-Konto angemeldet"
+          }
+        }
+      },
+      "error": {
+        "header": "Etwas ist schief gelaufen",
+        "paragraph": "Interner Serverfehler"
+      }
+    },
+    "button": {
+      "validation": {
+        "submit": "Absenden",
+        "submitted": "Abgesendet",
+        "submitting": "Wird gesendet",
+        "failed": "Fehler"
+      }
+    },
+    "profile": {
+      "header": {
+        "header": "Profil",
+        "paragraph": "Aktualisieren Sie Ihre Kontoinformationen"
+      },
+      "input": {
+        "email": "E-Mail",
+        "password": "Passwort",
+        "username": "Benutzername",
+        "firstname": "Vorname",
+        "lastname": "Nachname",
+        "picture": "Bild"
+      },
+      "button": {
+        "update": "Aktualisieren",
+        "delete": "Konto löschen"
+      },
+      "modal": {
+        "update": {
+          "success": {
+            "header": "Konto aktualisiert",
+            "paragraph": "Drücken Sie irgendwo, um fortzufahren"
+          },
+          "error": {
+            "header": "Etwas ist schief gelaufen",
+            "paragraph": {
+              "email": "E-Mail bereits in Gebrauch",
+              "server": "Interner Serverfehler"
+            }
+          }
+        },
+        "delete": {
+          "success": {
+            "header": "Konto gelöscht",
+            "paragraph": "Drücken Sie irgendwo, um fortzufahren"
+          },
+          "error": {
+            "header": "Etwas ist schief gelaufen",
+            "paragraph": "Interner Serverfehler"
+          }
+        }
+      }
+    },
+    "users": {
+      "header": {
+        "header": "Benutzer",
+        "paragraph": "Liste aller Benutzer auf der Plattform\n(öffentliche Informationen)"
+      }
+    },
+    "detail": {
+      "header": {
+        "header": "Benutzer",
+        "paragraph": "Öffentliche Informationen"
+      }
+    },
+    "info": "Informationen",
+    "infos": {
+      "title": "Titel",
+      "rating": "IMDB Bewertung",
+      "year": "Jahr",
+      "runtime": "Laufzeit",
+      "subtitles": "Untertitel",
+      "add_date": "Hinzugefügt am",
+      "description": "Zusammenfassung"
+    },
+    "genre": "Genre",
+    "genres": {
+        "any": "Beliebig",
+        "action": "Action",
+        "adventure": "Abenteuer",
+        "animation": "Animation",
+        "biography": "Biografie",
+        "comedy": "Komödie",
+        "crime": "Krimi",
+        "documentary": "Dokumentarfilm",
+        "drama": "Drama",
+        "family": "Familie",
+        "fantasy": "Fantasy",
+        "noir": "Film-Noir",
+        "history": "Geschichte",
+        "horror": "Horror",
+        "music": "Musik",
+        "musical": "Musical",
+        "mystery": "Mystery",
+        "romance": "Romanze",
+        "scifi": "Sci-Fi",
+        "sport": "Sport",
+        "thriller": "Thriller",
+        "war": "Krieg",
+        "western": "Western"
+    },
+    "filters": "Filter",
+    "sort_by": "Sortieren nach",
+    "order": "Reihenfolge",
+    "orders": {
+        "asc": "Aufsteigend",
+        "desc": "Absteigend"
+    },
+    "not_found": "Film nicht gefunden",
+    "comments": "Kommentare",
+    "comment": {
+        "content": {
+            "length": "Der Kommentar muss zwischen 8 und 1024 Zeichen lang sein"
+        }
+    },
+    "loading": "Laden",
+    "no_more_pages": "Kein weiterer Inhalt",
+    "top": "Top-Filme"
+  }

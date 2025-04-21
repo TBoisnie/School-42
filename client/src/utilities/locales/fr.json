@@ -1,0 +1,286 @@
+{
+    "navbar": {
+        "button": {
+            "language": "Français",
+            "logout": "Déconnexion",
+            "home": "Accueil",
+            "about": "À propos",
+            "profile": "Profil",
+            "movies": "Films",
+            "users": "Utilisateurs",
+            "login": "Connexion"
+        },
+        "modal": {
+            "success": {
+                "header": "Déconnexion réussie",
+                "paragraph": "Appuyez n'importe où pour continuer"
+            },
+            "error": {
+                "header": "Une erreur est survenue",
+                "paragraph": "Erreur interne du serveur"
+            }
+        }
+    },
+    "login": {
+        "header": {
+            "header": "Commencez !",
+            "paragraph": "Bienvenue sur le projet hypertube 42 !\nVeuillez vous connecter ou créer un compte pour continuer"
+        },
+        "input": {
+            "email": "Email",
+            "password": "Mot de passe"
+        },
+        "button": {
+            "login": "Connexion",
+            "reset": "Mot de passe oublié ?",
+            "register": "Créer un compte"
+        },
+        "modal": {
+            "success": {
+                "header": "Connexion réussie",
+                "paragraph": "Appuyez n'importe où pour continuer"
+            },
+            "error": {
+                "header": "Une erreur est survenue",
+                "paragraph": {
+                    "email": "Email non trouvé",
+                    "password": "Mot de passe incorrect",
+                    "server": "Erreur interne du serveur"
+                }
+            }
+        }
+    },
+    "register": {
+        "header": {
+            "header": "Créer un compte",
+            "paragraph": ""
+        },
+        "input": {
+            "email": "Email",
+            "password": "Mot de passe",
+            "username": "Nom d'utilisateur",
+            "firstname": "Prénom",
+            "lastname": "Nom de famille"
+        },
+        "button": {
+            "register": "S'inscrire"
+        },
+        "modal": {
+            "success": {
+                "header": "Compte créé",
+                "paragraph": "Appuyez n'importe où pour continuer"
+            },
+            "error": {
+                "header": "Une erreur est survenue",
+                "paragraph": {
+                    "email": "Email déjà utilisé",
+                    "server": "Erreur interne du serveur"
+                }
+            }
+        }
+    },
+    "reset": {
+        "header": {
+            "header": "Réinitialiser le mot de passe",
+            "paragraph": "Veuillez entrer votre adresse email pour recevoir un lien de réinitialisation de mot de passe"
+        },
+        "input": {
+            "email": "Email"
+        },
+        "button": {
+            "reset": "Réinitialiser"
+        },
+        "modal": {
+            "success": {
+                "header": "Réinitialisation réussie",
+                "paragraph": "Appuyez n'importe où pour continuer"
+            },
+            "error": {
+                "header": "Une erreur est survenue",
+                "paragraph": {
+                    "email": "Email non trouvé",
+                    "server": "Erreur interne du serveur"
+                }
+            }
+        }
+    },
+    "confirm": {
+        "header": {
+            "header": "Confirmer le mot de passe",
+            "paragraph": "Veuillez entrer votre nouveau mot de passe"
+        },
+        "input": {
+            "password": "Mot de passe"
+        },
+        "button": {
+            "confirm": "Confirmer"
+        },
+        "modal": {
+            "success": {
+                "header": "Réinitialisation réussie",
+                "paragraph": "Appuyez n'importe où pour continuer"
+            },
+            "error": {
+                "header": "Une erreur est survenue",
+                "paragraph": {
+                    "server": "Erreur interne du serveur"
+                }
+            }
+        }
+    },
+    "oauth": {
+        "42": {
+            "modal": {
+                "success": {
+                    "header": "OAuth 42",
+                    "paragraph": "Vous vous êtes connecté avec votre compte 42"
+                }
+            }
+        },
+        "google": {
+            "modal": {
+                "success": {
+                    "header": "OAuth Google",
+                    "paragraph": "Vous vous êtes connecté avec votre compte Google"
+                }
+            }
+        },
+        "github": {
+            "modal": {
+                "success": {
+                    "header": "OAuth Github",
+                    "paragraph": "Vous vous êtes connecté avec votre compte Github"
+                }
+            }
+        },
+        "error": {
+            "header": "Une erreur est survenue",
+            "paragraph": "Erreur interne du serveur"
+        }
+    },
+    "button": {
+        "validation": {
+            "submit": "Soumettre",
+            "submitted": "Soumis",
+            "submitting": "Soumission en cours",
+            "failed": "Erreur"
+        }
+    },
+    "profile": {
+        "header": {
+            "header": "Profil",
+            "paragraph": "Mettez à jour les informations de votre compte"
+        },
+        "input": {
+            "email": "Email",
+            "password": "Mot de passe",
+            "username": "Nom d'utilisateur",
+            "firstname": "Prénom",
+            "lastname": "Nom de famille",
+            "picture": "Photo"
+        },
+        "button": {
+            "update": "Mettre à jour",
+            "delete": "Supprimer le compte"
+        },
+        "modal": {
+            "update": {
+                "success": {
+                    "header": "Compte mis à jour",
+                    "paragraph": "Appuyez n'importe où pour continuer"
+                },
+                "error": {
+                    "header": "Une erreur est survenue",
+                    "paragraph": {
+                        "email": "Email déjà utilisé",
+                        "server": "Erreur interne du serveur"
+                    }
+                }
+            },
+            "delete": {
+                "success": {
+                    "header": "Compte supprimé",
+                    "paragraph": "Appuyez n'importe où pour continuer"
+                },
+                "error": {
+                    "header": "Une erreur est survenue",
+                    "paragraph": "Erreur interne du serveur"
+                }
+            }
+        }
+    },
+    "users": {
+        "header": {
+            "header": "Utilisateurs",
+            "paragraph": "Liste de tous les utilisateurs sur la plateforme\n(informations publiques)"
+        }
+    },
+    "detail": {
+        "header": {
+            "header": "Utilisateur",
+            "paragraph": "Informations publiques"
+        }
+    },
+    "info": "Informations",
+    "infos": {
+        "title": "Titre",
+        "rating": "Note IMDB",
+        "year": "Année",
+        "runtime": "Durée",
+        "subtitles": "Sous-titres",
+        "add_date": "Date d'ajout",
+        "description": "Resume"
+    },
+    "genre": "Genre",
+    "genres": {
+        "any": "Tous",
+        "action": "Action",
+        "adventure": "Aventure",
+        "animation": "Animation",
+        "biography": "Biographie",
+        "comedy": "Comédie",
+        "crime": "Crime",
+        "documentary": "Documentaire",
+        "drama": "Drame",
+        "family": "Famille",
+        "fantasy": "Fantastique",
+        "noir": "Film-Noir",
+        "history": "Histoire",
+        "horror": "Horreur",
+        "music": "Musique",
+        "musical": "Comédie musicale",
+        "mystery": "Mystère",
+        "romance": "Romance",
+        "scifi": "Science-fiction",
+        "sport": "Sport",
+        "thriller": "Thriller",
+        "war": "Guerre",
+        "western": "Western"
+    },
+    "filters": "Filtres",
+    "sort_by": "Trier par",
+    "order": "Ordre",
+    "orders": {
+        "asc": "Ascendant",
+        "desc": "Descendant"
+    },
+    "not_found": "Film non trouvé",
+    "comments": "Commentaires",
+    "create": "Commenter",
+    "save": "Publier",
+    "comment": {
+        "content": {
+            "length": "Le commentaire doit contenir entre 8 et 1024 characters"
+        }
+    },
+    "nav": {
+        "home": "Accueil"
+    },
+    "language": {
+        "en": "Anglais",
+        "fr": "Français"
+    },
+    "loading": "Chargement",
+    "no_more_pages": "Plus de contenu",
+    "top": "Meilleurs films"
+}

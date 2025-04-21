@@ -1,0 +1,286 @@
+{
+    "navbar": {
+      "button": {
+        "language": "Español",
+        "logout": "Cerrar sesión",
+        "home": "Inicio",
+        "about": "Acerca de",
+        "profile": "Perfil",
+        "movies": "Películas",
+        "users": "Usuarios",
+        "login": "Iniciar sesión"
+      },
+      "modal": {
+        "success": {
+          "header": "Cierre de sesión exitoso",
+          "paragraph": "Presiona en cualquier lugar para continuar"
+        },
+        "error": {
+          "header": "Algo salió mal",
+          "paragraph": "Error interno del servidor"
+        }
+      }
+    },
+    "login": {
+      "header": {
+        "header": "¡Empezar!",
+        "paragraph": "¡Bienvenido al proyecto hypertube 42!\nPor favor, inicia sesión o crea una cuenta para continuar"
+      },
+      "input": {
+        "email": "Correo electrónico",
+        "password": "Contraseña"
+      },
+      "button": {
+        "login": "Iniciar sesión",
+        "reset": "¿Olvidaste tu contraseña?",
+        "register": "Crear cuenta"
+      },
+      "modal": {
+        "success": {
+          "header": "Inicio de sesión exitoso",
+          "paragraph": "Presiona en cualquier lugar para continuar"
+        },
+        "error": {
+          "header": "Algo salió mal",
+          "paragraph": {
+            "email": "Correo electrónico no encontrado",
+            "password": "Contraseña incorrecta",
+            "server": "Error interno del servidor"
+          }
+        }
+      }
+    },
+    "register": {
+      "header": {
+        "header": "Crear cuenta",
+        "paragraph": ""
+      },
+      "input": {
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "username": "Nombre de usuario",
+        "firstname": "Nombre",
+        "lastname": "Apellido"
+      },
+      "button": {
+        "register": "Registrar"
+      },
+      "modal": {
+        "success": {
+          "header": "Cuenta creada",
+          "paragraph": "Presiona en cualquier lugar para continuar"
+        },
+        "error": {
+          "header": "Algo salió mal",
+          "paragraph": {
+            "email": "Correo electrónico ya en uso",
+            "server": "Error interno del servidor"
+          }
+        }
+      }
+    },
+    "reset": {
+      "header": {
+        "header": "Restablecer contraseña",
+        "paragraph": "Por favor, introduce tu dirección de correo electrónico para recibir un enlace de restablecimiento de contraseña"
+      },
+      "input": {
+        "email": "Correo electrónico"
+      },
+      "button": {
+        "reset": "Restablecer"
+      },
+      "modal": {
+        "success": {
+          "header": "Restablecimiento de contraseña exitoso",
+          "paragraph": "Presiona en cualquier lugar para continuar"
+        },
+        "error": {
+          "header": "Algo salió mal",
+          "paragraph": {
+            "email": "Correo electrónico no encontrado",
+            "server": "Error interno del servidor"
+          }
+        }
+      }
+    },
+    "confirm": {
+      "header": {
+        "header": "Confirmar contraseña",
+        "paragraph": "Por favor, introduce tu nueva contraseña"
+      },
+      "input": {
+        "password": "Contraseña"
+      },
+      "button": {
+        "confirm": "Confirmar"
+      },
+      "modal": {
+        "success": {
+          "header": "Restablecimiento de contraseña exitoso",
+          "paragraph": "Presiona en cualquier lugar para continuar"
+        },
+        "error": {
+          "header": "Algo salió mal",
+          "paragraph": {
+            "server": "Error interno del servidor"
+          }
+        }
+      }
+    },
+    "oauth": {
+      "42": {
+        "modal": {
+          "success": {
+            "header": "OAuth 42",
+            "paragraph": "Has iniciado sesión con tu cuenta de 42"
+          }
+        }
+      },
+      "google": {
+        "modal": {
+          "success": {
+            "header": "OAuth de Google",
+            "paragraph": "Has iniciado sesión con tu cuenta de Google"
+          }
+        }
+      },
+      "github": {
+        "modal": {
+          "success": {
+            "header": "OAuth de Github",
+            "paragraph": "Has iniciado sesión con tu cuenta de Github"
+          }
+        }
+      },
+      "error": {
+        "header": "Algo salió mal",
+        "paragraph": "Error interno del servidor"
+      }
+    },
+    "button": {
+      "validation": {
+        "submit": "Enviar",
+        "submitted": "Enviado",
+        "submitting": "Enviando",
+        "failed": "Error"
+      }
+    },
+    "profile": {
+      "header": {
+        "header": "Perfil",
+        "paragraph": "Actualiza la información de tu cuenta"
+      },
+      "input": {
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "username": "Nombre de usuario",
+        "firstname": "Nombre",
+        "lastname": "Apellido",
+        "picture": "Foto"
+      },
+      "button": {
+        "update": "Actualizar",
+        "delete": "Eliminar cuenta"
+      },
+      "modal": {
+        "update": {
+          "success": {
+            "header": "Cuenta actualizada",
+            "paragraph": "Presiona en cualquier lugar para continuar"
+          },
+          "error": {
+            "header": "Algo salió mal",
+            "paragraph": {
+              "email": "Correo electrónico ya en uso",
+              "server": "Error interno del servidor"
+            }
+          }
+        },
+        "delete": {
+          "success": {
+            "header": "Cuenta eliminada",
+            "paragraph": "Presiona en cualquier lugar para continuar"
+          },
+          "error": {
+            "header": "Algo salió mal",
+            "paragraph": "Error interno del servidor"
+          }
+        }
+      }
+    },
+    "users": {
+      "header": {
+        "header": "Usuarios",
+        "paragraph": "Lista de todos los usuarios en la plataforma\n(información pública)"
+      }
+    },
+    "detail": {
+      "header": {
+        "header": "Usuario",
+        "paragraph": "Información pública"
+      }
+    },
+    "info": "Información",
+    "infos": {
+      "title": "Título",
+      "rating": "Calificación IMDB",
+      "year": "Año",
+      "runtime": "Duración",
+      "subtitles": "Subtítulos",
+      "add_date": "Fecha de adición",
+      "description": "Resumen"
+    },
+    "genre": "Género",
+    "genres": {
+        "any": "Cualquiera",
+        "action": "Acción",
+        "adventure": "Aventura",
+        "animation": "Animación",
+        "biography": "Biografía",
+        "comedy": "Comedia",
+        "crime": "Crimen",
+        "documentary": "Documental",
+        "drama": "Drama",
+        "family": "Familiar",
+        "fantasy": "Fantasía",
+        "noir": "Cine negro",
+        "history": "Historia",
+        "horror": "Terror",
+        "music": "Música",
+        "musical": "Musical",
+        "mystery": "Misterio",
+        "romance": "Romance",
+        "scifi": "Ciencia ficción",
+        "sport": "Deporte",
+        "thriller": "Suspenso",
+        "war": "Guerra",
+        "western": "Occidental"
+    },
+    "filters": "Filtros",
+    "sort_by": "Ordenar por",
+    "order": "Orden",
+    "orders": {
+        "asc": "Ascendente",
+        "desc": "Descendente"
+    },
+    "not_found": "Película no encontrada",
+    "comments": "Comentarios",
+    "create": "Comentar",
+    "save": "Publicar",
+    "comment": {
+        "content": {
+            "length": "El comentario debe tener entre 8 y 1024 caracteres"
+        }
+    },
+    "nav": {
+        "home": "Inicio"
+    },
+    "language": {
+        "en": "Inglés",
+        "fr": "Francés"
+    },
+    "loading": "Cargando",
+    "no_more_pages": "No hay más contenido",
+    "top": "Películas principales"
+  }

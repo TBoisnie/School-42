@@ -1,0 +1,47 @@
+{
+	"info": "Informations",
+	"infos": {
+		"title": "Title",
+		"rating": "IMDB Rating",
+		"year": "Year",
+		"runtime": "Runtime",
+		"subtitles": "Subtitles",
+		"add_date": "Add date",
+		"description": "Summary"
+	},
+	"genre": "Genre",
+	"genres": {
+		"any": "Any",
+		"action": "Action",
+		"adventure": "Aventure",
+		"animation": "Animation",
+		"biography": "Biography",
+		"comedy": "Comedy",
+		"crime": "Crime",
+		"documentary": "Documentary",
+		"drama": "Drama",
+		"family": "Family",
+		"fantasy": "Fantasy",
+		"noir": "Film-Noir",
+		"history": "History",
+		"horror": "Horror",
+		"music": "Music",
+		"musical": "Musical",
+		"mystery": "Mystery",
+		"romance": "Romance",
+		"scifi": "Sci-Fi",
+		"sport": "Sport",
+		"thriller": "Thriller",
+		"war": "War",
+		"western": "Western"
+	},
+	"filters": "Filters",
+	"sort_by": "Sort by",
+	"order": "Order",
+	"orders": {
+		"asc": "Asc",
+		"desc": "Desc"
+	},
+	"not_found": "Movie not found",
+	"top": "Top Movies"
+}

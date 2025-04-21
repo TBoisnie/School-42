@@ -1,0 +1,14 @@
+{
+  "license": "UNLICENSED",
+  "scripts": {
+    "update": "node -e \"if (!process.argv[1]) { console.error('Error: Commit message is required'); process.exit(1); } require('child_process').execSync('git add . && git commit -m \\\"' + process.argv[1] + '\\\" && git push', {stdio: 'inherit'})\"",
+    "dev": "yarn install && concurrently \"yarn --cwd ./client dev\" \"yarn --cwd ./server dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "dependencies": {
+    "node": "^18.20.6",
+    "yarn": "^1.22.22"
+  }
+}
