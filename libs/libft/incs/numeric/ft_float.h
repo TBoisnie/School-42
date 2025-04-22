@@ -1,0 +1,6 @@
+#ifndef LIBFT_NUMERIC_FLOAT_H
+#define LIBFT_NUMERIC_FLOAT_H
+
+
+
+#endif

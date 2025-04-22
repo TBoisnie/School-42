@@ -1,0 +1,12 @@
+# Editor
+.vscode/
+
+# Binaries
+bins/
+
+# Logs
+logs/
+*.log
+
+# Test
+file
