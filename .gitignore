@@ -1,0 +1,10 @@
+# Editor
+.vscode/
+
+# Binaries
+bins/
+
+# Logs
+logs/
+
+inetutils-2.0/
