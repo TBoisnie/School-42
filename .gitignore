@@ -1,0 +1,6 @@
+# Compilation
+bins/
+
+# Test
+libft_malloc.so
+a.out
