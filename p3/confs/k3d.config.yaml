@@ -1,0 +1,13 @@
+# ==============================================================================
+# == K3d: Config
+# ==============================================================================
+# https://k3d.io/v5.4.1/usage/configfile/
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: iot-cluster
+agents: 1
+ports:
+  - port: 8888:30088
+    nodeFilters:
+      - agent:*

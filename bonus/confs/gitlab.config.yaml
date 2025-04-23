@@ -1,0 +1,145 @@
+# ==============================================================================
+# == GitLab: Secret
+# ==============================================================================
+apiVersion: v1
+kind: Secret
+metadata:
+  name: iot-gitlab-secret
+type: Opaque
+data:
+  gitlab-root-password: UEBzc3dvcmQ=
+
+---
+# ==============================================================================
+# == GitLab: Volume
+# ==============================================================================
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: iot-gitlab-pvc-config
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: iot-gitlab-pvc-logs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: iot-gitlab-pvc-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+
+---
+# ==============================================================================
+# == GitLab: Service
+# ==============================================================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: iot-gitlab-svc
+spec:
+  selector:
+    app: gitlab
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  - name: https
+    port: 443
+    targetPort: 443
+  - name: ssh
+    port: 22
+    targetPort: 22
+
+---
+# ==============================================================================
+# == GitLab: Deployment
+# ==============================================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iot-gitlab-dp
+  labels:
+    app: gitlab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitlab
+  template:
+    metadata:
+      labels:
+        app: gitlab
+    spec:
+      containers:
+      - name: iot-gitlab-ctn
+        image: gitlab/gitlab-ee
+        env:
+          - name: GITLAB_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: iot-gitlab-secret
+                key: gitlab-root-password
+        ports:
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 443
+        - name: ssh
+          containerPort: 22
+        volumeMounts:
+        - name: iot-gitlab-mnt-config
+          mountPath: "/etc/gitlab"
+        - name: iot-gitlab-mnt-logs
+          mountPath: "/var/log/gitlab"
+        - name: iot-gitlab-mnt-data
+          mountPath: "/var/opt/gitlab"
+      volumes:
+      - name: iot-gitlab-mnt-config
+        persistentVolumeClaim:
+          claimName: iot-gitlab-pvc-config
+      - name: iot-gitlab-mnt-logs
+        persistentVolumeClaim:
+          claimName: iot-gitlab-pvc-logs
+      - name: iot-gitlab-mnt-data
+        persistentVolumeClaim:
+          claimName: iot-gitlab-pvc-data
+
+---
+# ==============================================================================
+# == GitLab: Ingress
+# ==============================================================================
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: iot-gitlab-ingress
+  labels:
+    app: gitlab
+spec:
+  rules:
+    - http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: iot-gitlab-svc
+                port:
+                  number: 80

@@ -1,0 +1,25 @@
+# ==============================================================================
+# == ArgoCD: Application
+# ==============================================================================
+# https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications
+# https://argo-cd.readthedocs.io/en/stable/operator-manual/application.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: iot-argocd-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: YOUR_REPO_URL
+    targetRevision: main
+    path: .
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: false

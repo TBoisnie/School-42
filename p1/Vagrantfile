@@ -1,0 +1,69 @@
+# ==============================================================================
+# Variables
+# ==============================================================================
+API_VERSION = "2"
+
+COMMON =
+{
+	'token_path' => "/vagrant/token",
+}
+
+SERVER =
+{
+	'name' => "tboisnieS",
+	'ip' => "192.168.56.110"
+}
+
+WORKER =
+{
+	'name' => "tboisnieSW",
+	'ip' => "192.168.56.111"
+}
+
+# ==============================================================================
+# Vagrant
+# ==============================================================================
+Vagrant.configure(API_VERSION) do |config|
+	# Common -------------------------------------------------------------------
+	config.vm.box = "generic/alpine317"
+	config.vm.communicator = "ssh" # Default, but defined for peer-review
+	config.vm.synced_folder ".", "/vagrant", disabled: true # Disable the default
+	config.vm.synced_folder "./confs/shared", "/vagrant", create: true, SharedFoldersEnableSymlinksCreate: false
+
+	config.vm.provider "virtualbox" do |vbox|
+		vbox.memory = 1024
+		vbox.cpus = 2
+	end
+
+	# Server -------------------------------------------------------------------
+	config.vm.define SERVER['name'] do |ctrl|
+
+		ctrl.vm.hostname = SERVER['name']
+		ctrl.vm.network "private_network", ip: SERVER['ip'], hostname: true
+
+		ctrl.vm.provider "virtualbox" do |vbox|
+			vbox.name = SERVER['name']
+		end
+
+		ctrl.vm.provision "shell",
+			privileged: true,
+			path: "./scripts/k3s.server.sh",
+			args: [ COMMON['token_path'], SERVER['ip'] ]
+	end
+
+	# Worker -------------------------------------------------------------------
+	config.vm.define WORKER['name'] do |ctrl|
+
+		ctrl.vm.hostname = WORKER['name']
+		ctrl.vm.network "private_network", ip: WORKER['ip'], hostname: true
+
+		ctrl.vm.provider "virtualbox" do |vbox|
+			vbox.name = WORKER['name']
+		end
+
+		ctrl.vm.provision "shell",
+			privileged: true,
+			path: "./scripts/k3s.worker.sh",
+			args: [ COMMON['token_path'], SERVER['ip'], WORKER['ip'] ]
+	end
+end

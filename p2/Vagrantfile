@@ -1,0 +1,48 @@
+# ==============================================================================
+# Variables
+# ==============================================================================
+API_VERSION = "2"
+
+SERVER =
+{
+	'name' => "tboisnieS",
+	'ip' => "192.168.56.110",
+	'deploy_path' => "/home/vagrant/k3s.deploy.yaml"
+}
+
+# ==============================================================================
+# Vagrant
+# ==============================================================================
+Vagrant.configure(API_VERSION) do |config|
+	# Common -------------------------------------------------------------------
+	config.vm.box = "generic/alpine317"
+	config.vm.communicator = "ssh" # Default, but defined for peer-review
+	config.vm.synced_folder ".", "/vagrant", disabled: true # Disable the default
+	config.vm.synced_folder "./confs/shared", "/vagrant", SharedFoldersEnableSymlinksCreate: false
+
+	config.vm.provider "virtualbox" do |vbox|
+		vbox.memory = 2048
+		vbox.cpus = 4
+	end
+
+	# Server -------------------------------------------------------------------
+	config.vm.define SERVER['name'] do |ctrl|
+
+		ctrl.vm.hostname = SERVER['name']
+		ctrl.vm.network "private_network", ip: SERVER['ip'], hostname: true
+		ctrl.vm.network "forwarded_port", guest: 80, host: 80
+
+		ctrl.vm.provider "virtualbox" do |vbox|
+			vbox.name = SERVER['name']
+		end
+
+		ctrl.vm.provision "file",
+			source: "./confs/k3s.deploy.yaml",
+			destination: SERVER['deploy_path']
+
+		ctrl.vm.provision "shell",
+			privileged: true,
+			path: "./scripts/k3s.server.sh",
+			args: [ SERVER['ip'], SERVER['deploy_path'] ]
+	end
+end

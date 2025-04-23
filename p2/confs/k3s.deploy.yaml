@@ -1,0 +1,229 @@
+# ==============================================================================
+# == K3s: App 1
+# ==============================================================================
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-1-svc
+  labels:
+    app: app-1
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: app-1
+
+---
+
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-1-dp
+  labels:
+    app: app-1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app-1
+    spec:
+      containers:
+      - name: app-1
+        image: nginx:stable-alpine
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: app-1-ps
+          mountPath: "/usr/share/nginx/html"
+      # https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-pod
+      volumes:
+      - name: app-1-ps
+        hostPath:
+          path: "/vagrant/app-1"
+  selector:
+    matchLabels:
+      app: app-1
+
+---
+
+# ==============================================================================
+# == K3s: App 2
+# ==============================================================================
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-2-svc
+  labels:
+    app: app-2
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: app-2
+
+---
+
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-2-dp
+  labels:
+    app: app-2
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: app-2
+    spec:
+      containers:
+      - name: app-2
+        image: nginx:stable-alpine
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: app-2-ps
+          mountPath: "/usr/share/nginx/html"
+      # https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-pod
+      volumes:
+      - name: app-2-ps
+        hostPath:
+          path: "/vagrant/app-2"
+  selector:
+    matchLabels:
+      app: app-2
+
+---
+
+# ==============================================================================
+# == K3s: App 3
+# ==============================================================================
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-3-svc
+  labels:
+    app: app-3
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: app-3
+
+---
+
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-3-dp
+  labels:
+    app: app-3
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app-3
+    spec:
+      containers:
+      - name: app-3
+        image: nginx:stable-alpine
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: app-3-ps
+          mountPath: "/usr/share/nginx/html"
+      # https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/#create-a-pod
+      volumes:
+      - name: app-3-ps
+        hostPath:
+          path: "/vagrant/app-3"
+  selector:
+    matchLabels:
+      app: app-3
+
+---
+
+# ==============================================================================
+# == K3s: Ingress
+# ==============================================================================
+# https://kubernetes.io/docs/concepts/services-networking/ingress/#name-based-virtual-hosting
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+spec:
+  rules:
+  - host: app1.com
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: app-1-svc
+            port:
+              number: 80
+  - host: app2.com
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: app-2-svc
+            port:
+              number: 80
+  - host: app3.com
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: app-3-svc
+            port:
+              number: 80
+  - http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: app-3-svc
+            port:
+              number: 80

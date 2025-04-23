@@ -1,0 +1,23 @@
+# ==============================================================================
+# == ArgoCD: Application
+# ==============================================================================
+# https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications
+# https://argo-cd.readthedocs.io/en/stable/operator-manual/application.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: iot-argocd-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: http://{HOST_PLACEHOLDER}/root/42-InceptionOfThings-App.git
+    targetRevision: main
+    path: .
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: false
