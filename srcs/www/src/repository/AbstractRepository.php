@@ -8,9 +8,6 @@ abstract class AbstractRepository
 	private const TYPE = 'pgsql';
 	private const PORT = '5432';
 	private const HOST = 'db';
-	private const NAME = $_ENV['POSTGRES_DB'];
-	private const USER = $_ENV['POSTGRES_USER'];
-	private const PASS = $_ENV['POSTGRES_PASSWORD'];
 
 	private static ?\PDO $connection = null;
 
@@ -21,14 +18,14 @@ abstract class AbstractRepository
 			$dsn  = self::TYPE;
 			$dsn .= ":host=".self::HOST;
 			$dsn .= ";port=".self::PORT;
-			$dsn .= ";dbname=".self::NAME;
+			$dsn .= ";dbname=".$_ENV['POSTGRES_DB'];
 			$dsn .= ";options='--client_encoding=UTF8'";
 
 			$options = [
 				\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
 			];
 
-			static::$connection = new \PDO($dsn, self::USER, self::PASS, $options);
+			static::$connection = new \PDO($dsn, $_ENV['POSTGRES_USER'], $_ENV['POSTGRES_PASSWORD'], $options);
 		}
 
 		return static::$connection;

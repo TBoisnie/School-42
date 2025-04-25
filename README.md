@@ -24,7 +24,7 @@ Features:
 	vim .env
 
 	# Mail
-	sed 's/YOUR_GMAIL_ADDRESS/something@gmail.com/g' ./docker/php/config/msmtprc
+	sed -i 's/YOUR_GMAIL_ADDRESS/something@gmail.com/g' ./docker/php/config/msmtprc
 	```
 
 1. Build
@@ -43,6 +43,13 @@ Features:
 	```sh
 	docker inspect -f '{{range.NetworkSettings.Networks}}{{.Gateway}}{{end}}' srcs-server-1
 	```
+
+## Screenshots
+
+![Image of the homepage](./docs/home.png)
+![Image of the registration page](./docs/register.png)
+![Image of the studio page](./docs/studio.png)
+![Image of the picture page](./docs/picture.png)
 
 ## Author
 
