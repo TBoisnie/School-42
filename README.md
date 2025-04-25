@@ -35,6 +35,26 @@ List of projects carried out during my training at 42.
 ### Branches
 
 | Branch | Level | Title | Score[^1] | Brief |
-| :----- | ----: | :---- | ---------: | :---- |
+| :----- | ----: | :---- | --------: | :---- |
+| AI | 7 | [Ready Set Bool](https://github.com/TBoisnie/School-42/tree/ai-7-readysetbool) | 100 | Various exercices in `C++` about `binary code`, `boolean algebra` and `set theory`. |
+| AI | 7 | [Matrix](https://github.com/TBoisnie/School-42/tree/ai-7-matrix) | 125 | Various exercices in `C++` about `linear algebra`. |
+| AI | 7 | [N-Puzzle](https://github.com/TBoisnie/School-42/tree/ai-7-npuzzle) | 109 | Implementation in `Python` of the `A*` algorithm. |
+| AI | 7 | [Ft Linear Regression](https://github.com/TBoisnie/School-42/tree/ai-7-ftlinearregression) | 121 | Implementation in `python` of the `linear regression` algorithm. |
+| AI | 8 | [Multi Layer Perceptron](https://github.com/TBoisnie/School-42/tree/ai-8-multilayerperceptron) | 125 | Implementation in `python` of a `multi-layer perceptron`. |
+| Cloud | 7 | [Inception of Things](https://github.com/TBoisnie/School-42/tree/cloud-7-inceptionofthings) | 125 | Creation and configuration of multiple clusters using `Vagrant`, `Kubernetes`, `K3s`, `K3d` and a CI/CD pipeline using `ArgoCD`. |
+| Compiler | 7 | [Computor V1](https://github.com/TBoisnie/School-42/tree/compiler-7-computorv1) | 125 | Implementation in `Python` of an equation interpreter and solver. |
+| Compiler | 8 | [Computor V2](https://github.com/TBoisnie/School-42/tree/compiler-8-computorv2) | 121 | Implementation in `Python` of a math interpreter. |
+| Misc | 7 | [Avaj Launcher](https://github.com/TBoisnie/School-42/tree/misc-7-avajlauncher) | 114 | Implementation in `Java` of a provided UML diagram. |
+| Security | 7 | [Darkly](https://github.com/TBoisnie/School-42/tree/security-7-darkly) | 125 | CTF project where we have to find 14 vulnerabilities on a website. |
+| Security | 7 | [SnowCrash](https://github.com/TBoisnie/School-42/tree/security-7-snowcrash) | 125 | CTF project where we have to find a way to get access to 15 flag files. |
+| Security | 8 | [RainFall](https://github.com/TBoisnie/School-42/tree/security-8-rainfall) | 125 | CTF project where we have to find a way (mostly reverse engineering of compiled `C`/`C++`) to get access to 14 flag files. |
+| Security | 8 | [FT SSL](https://github.com/TBoisnie/School-42/tree/security-8-ftssl) | 125 | Reimplementation in `C` of the `MD5`, `SHA256` and `Whirlpool` algorithm. |
+| Unix | 7 | [FT Ls](https://github.com/TBoisnie/School-42/tree/unix-7-ftls) | 110 | Reimplementation in `C` of the `ls` command. |
+| Unix | 7 | [FT Ping](https://github.com/TBoisnie/School-42/tree/unix-7-ftping) | 125 | Reimplementation in `C` of the `ping` command. |
+| Unix | 7 | [Malloc](https://github.com/TBoisnie/School-42/tree/unix-7-malloc) | 119 | Reimplementation in `C` of the `malloc`, `realloc` and `free` functions. |
+| Web | 7 | [Camagru](https://github.com/TBoisnie/School-42/tree/web-7-camagru) | 107 | Creation of a website in `PHP` with image manipulation. |
+| Web | 7 | [Red Tetris](https://github.com/TBoisnie/School-42/tree/web-7-redtetris) | 125 | Creation of a multi-player Tetris game website in `JavaScript` (using `React`, `Redux`, `Socket.io` and `Jest` for Unit testing). |
+| Web | 7 | [Matcha](https://github.com/TBoisnie/School-42/tree/web-7-matcha) | 118 | Creation of a dating website in `TypeScript` (using `React`, `Redux`, `Socket.io`, `Tailwind`, `Express`, `PostgreSQL` and `Docker`). |
+| Web | 8 | [HyperTube](https://github.com/TBoisnie/School-42/tree/web-8-hypertube) | 125 | Creation of a streaming website in `TypeScript` (using `NestJS`, `React`, `PostgreSQL` and `Docker`). |
 
 [^1]: Score are 0-100 based. However, if you score a 100 on required part, some projects allow to implement more functionalities for bonus points (up to 125).
