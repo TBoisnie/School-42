@@ -1,0 +1,10 @@
+# Logs
+.logs/
+logs/
+
+# Bins
+bins/
+
+# Executables
+ft_*
+std_*

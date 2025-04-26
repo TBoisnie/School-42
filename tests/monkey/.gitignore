@@ -1,0 +1,4 @@
+# Compilation
+.objs/
+ft_*
+std_*
